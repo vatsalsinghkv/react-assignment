@@ -1,0 +1,29 @@
+@use './sass/variables' as *;
+
+.App {
+  text-align: center;
+
+  .heading {
+    margin: 8rem 0;
+  }
+}
+
+.btn {
+  margin-top: 4rem;
+}
+
+.modal {
+  &__heading {
+    margin-bottom: 3rem;
+  }
+
+  &__btn {
+    margin-left: auto;
+    display: block !important;
+
+    @media only screen and (max-width: $md-sm) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

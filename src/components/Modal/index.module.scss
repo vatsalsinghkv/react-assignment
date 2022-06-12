@@ -1,0 +1,75 @@
+@use '../../sass/variables' as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(#000, 0.8);
+  backdrop-filter: blur(3px);
+  z-index: 50;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+
+  padding: 3rem 4rem;
+  background-color: #fff;
+
+  width: 50%;
+
+  @media only screen and (max-width: $lg) {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: $md) {
+    padding: 3rem;
+    width: 70%;
+  }
+
+  @media only screen and (max-width: $md-sm) {
+    padding: 3rem;
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $sm) {
+    width: 90%;
+  }
+
+  box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+  border-radius: 5px;
+
+  z-index: 100;
+  overflow: hidden;
+
+  transform: translate(-50%, -65%);
+
+  // MODAL CLOSE
+  &__close {
+    background: none;
+    border: none;
+    display: inline-block;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    span {
+      font-size: 2.6rem;
+      display: block;
+    }
+
+    cursor: pointer;
+
+    color: var(--color-grey-1);
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-delete);
+    }
+  }
+}

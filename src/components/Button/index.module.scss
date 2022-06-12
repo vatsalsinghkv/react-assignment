@@ -1,0 +1,48 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    width: 124px;
+    height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    background: var(--color-primary);
+
+    &.delete {
+      background: var(--color-delete);
+    }
+
+    &.warning {
+      background: var(--color-warning);
+      color: #000;
+    }
+
+    // ICON
+    span {
+      margin-right: 3px;
+    }
+
+    &:hover {
+      box-shadow: 0 0.75rem 1.5rem rgba(#000, 0.2);
+      transform: translateY(-2px);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.1);
+      transform: translateY(-1px);
+    }
+  }
+}
